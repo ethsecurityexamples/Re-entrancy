@@ -64,3 +64,21 @@ Let's check the balance on Exploit contract to see it:
 So, how we can avoid this horrible situation for our code?
 
 [![](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/11.jpg)](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/11.jpg)
+
+Let's repeat the process againg, and see how the vulnerable contract has 2 ETH.
+
+[![](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/12.jpg)](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/12.jpg)
+
+Now we execute the exploit by sending again 1 ETH to the vulnerable contract from *Exploit* contract. 
+But now we can see that we got an error, an exception launched by the EVM.
+
+[![](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/13.jpg)](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/13.jpg)
+
+This is due to the change of the execution order of the buggy instruction.
+The trick is update the balance of vulnerable contract, BEFORE we execute the instruction of withdraw ETH.
+In this case, the reentrancy code is not possible anymore, because the balance of the vulnerable contract for that address is now 0.
+
+
+Let's check that vulnerable contract still has 2 ETH:
+
+[![](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/14.jpg)](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/14.jpg)

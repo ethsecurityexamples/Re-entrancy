@@ -8,3 +8,7 @@ Reentrancy bug happens when contract A calls contract B, and B is able to call b
 
 In the example: A is *VulnerableContract* contract, and B is *Exploit* contract.
 
+
+[![](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/2.jpg)](http:https://github.com/ethsecurityexamples/Re-entrancy/blob/main/2.jpg/)
+
+First, let's see the bug working:

@@ -33,5 +33,6 @@ Now deploy the hacker contract, *Exploit* :
 
 
 
+Before execute the exploit, let's check that vulnerable contract has 2 ETH: the 2 ETH that we sent before with 2 different addreses:
 
-.... still working on it, finished today, please be patient.
+[![](https://github.com/ethsecurityexamples/Re-entrancy/blob/main/7.jpg)](http://https://github.com/ethsecurityexamples/Re-entrancy/blob/main/7.jpg)
